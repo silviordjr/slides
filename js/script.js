@@ -4,5 +4,5 @@ const slide = new SlideNav ('.slide', '.wrapper')
 
 slide.init()
 slide.addArrow('.prev', '.next')
-slide.addControl()
+slide.addControl('.custom-control')
 slide.addTimeChange(10000)
