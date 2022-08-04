@@ -231,6 +231,16 @@ export class SlideNav extends Slide {
         this.controlArray.forEach((item, index) => this.eventControl(item, index))
     }
 
+    addTimeChange (time) {
+        setInterval(() => {
+            if (this.index.active !== this.controlArray.length -1) {
+                this.changeSlide(this.index.next)
+            } else {
+                this.changeSlide(0)
+            }
+        }, time)
+    }
+
     bindControlEvents () {
         this.eventControl = this.eventControl.bind(this)
         this.activeControlItem = this.activeControlItem.bind(this)
